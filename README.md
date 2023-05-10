@@ -1,26 +1,29 @@
-Satisfy
+  <h1>Satisfy</h1>
+  <p>Satisfy is an end-to-end project based on the famous Spotify app that allows users to sign up, log in, and build their own playlists with their desired songs. The app also features real-time synchronization with mobile devices using sockets and is fully responsive. Additionally, the app utilizes YouTube's API to retrieve song information and integrate YouTube videos.</p>
+  <p>This project was created in collaboration with Darnell Green and Amit Cohen.</p>
 
-Satisfy is a Vue.js end-to-end project based on the famous Spotify app that allows users to sign up, log in, and build their own playlists with their desired songs. The app also features real-time synchronization with mobile devices using sockets and is fully responsive. Additionally, the app utilizes YouTube's API to retrieve song information and integrate YouTube videos.
+  <h2>Features</h2>
+  <ul>
+    <li>User authentication: Users can sign up and log in to the app to access their playlists.</li>
+    <li>Playlist creation: Users can create their own playlists by adding songs from the app's library, which includes song information and YouTube videos.</li>
+    <li>Real-time synchronization: Users can sync their playlists with their mobile devices using sockets.</li>
+    <li>Fully responsive: The app is designed to work seamlessly across all screen sizes and devices.</li>
+  </ul>
 
-Features
-User authentication: Users can sign up and log in to the app to access their playlists.
-Playlist creation: Users can create their own playlists by adding songs from the app's library, which includes song information and YouTube videos.
-Real-time synchronization: Users can sync their playlists with their mobile devices using sockets.
-Fully responsive: The app is designed to work seamlessly across all screen sizes and devices.
-Getting started
-To use Satisfy, you'll need to follow these steps:
+  <h2>Getting started</h2>
+  <p>To use Satisfy, please visit the following link:</p>
+  <a href="https://satisfy.onrender.com/#/station">https://satisfy.onrender.com/#/station</a>
+  <p>This link will take you to the Satisfy website where you can sign up, log in, and start building your own playlists.</p>
 
-Clone this repository to your local machine.
-Install the dependencies using npm install.
-Start the server using npm start.
-Navigate to localhost:3000 in your web browser.
-Technologies used
-Satisfy was built using the following technologies:
+  <h2>Technologies used</h2>
+  <ul>
+    <li>Node.js</li>
+    <li>Express</li>
+    <li>Socket.io</li>
+    <li>Vue.js</li>
+    <li>Vuex</li>
+    <li>Sass</li>
+    <li>MongoDB</li>
+    <li>YouTube API</li>
+  </ul>
 
-Node.js
-Express
-Socket.io
-React
-Vue.js
-MongoDB
-YouTube API
