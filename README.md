@@ -25,14 +25,6 @@
     <li>MongoDB</li>
     <li>YouTube API</li>
   </ul>
-
-<div>
-  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/DemoPlaylist_ly217i.jpg" width="75%" align="left"  />
-  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730489/DemoPlaylistMobileCut_x9xgfp.png" width="20%" align="right"  />
-</div>
-<hr>
-<div>
-  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/HomePage_c9gpfu.jpg" width="75%" align="left"  />
-  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730489/HomePageMobileCut_icvvqc.png" width="20%" align="right"  />
-</div>
+  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/DemoPlaylist_ly217i.jpg"/>
+  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/HomePage_c9gpfu.jpg"/>
 
