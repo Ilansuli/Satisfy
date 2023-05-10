@@ -1,7 +1,6 @@
   <h1>Satisfy</h1>
   <p>To use Satisfy, please visit the following link:</p>
   <a href="https://satisfy.onrender.com/#/station">https://satisfy.onrender.com/#/station</a>
-  <p>This link will take you to the Satisfy website where you can sign up, log in, and start building your own playlists.</p>
    <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683726266/headphones-removebg-preview_naln9y.png" width="10%" />
   <p>Satisfy is an end-to-end project based on the famous Spotify app that allows users to sign up, log in, and build their own playlists with their desired songs. The app also features real-time synchronization with mobile devices using sockets and is fully responsive. Additionally, the app utilizes YouTube's API to retrieve song information and integrate YouTube videos.</p>
   <p>This project was created in collaboration with Darnell Green and Amit Cohen.</p>
@@ -26,4 +25,14 @@
     <li>MongoDB</li>
     <li>YouTube API</li>
   </ul>
+
+<div>
+  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/DemoPlaylist_ly217i.jpg" width="75%" align="left"  />
+  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730489/DemoPlaylistMobileCut_x9xgfp.png" width="20%" align="right"  />
+</div>
+<hr>
+<div>
+  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/HomePage_c9gpfu.jpg" width="75%" align="left"  />
+  <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730489/HomePageMobileCut_icvvqc.png" width="20%" align="right"  />
+</div>
 
