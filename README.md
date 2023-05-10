@@ -27,4 +27,11 @@
   </ul>
   <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/DemoPlaylist_ly217i.jpg"/>
   <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/HomePage_c9gpfu.jpg"/>
-
+ <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683731654/WhatsApp_Image_2023-05-10_at_18.13.55_vfefhf.jpg"/>
+ <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/Ilan_sPlaylist_m4cuc1.jpg"/>
+ <div>
+ <img width="25%"  src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730489/DemoPlaylistMobileCut_x9xgfp.png"/>
+ <img width="25%" src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730489/HomePageMobileCut_icvvqc.png"/>
+ <img width="25%"  src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683730488/SearchPageMobileCut_ya9oux.png"/>
+</div>
+ 
