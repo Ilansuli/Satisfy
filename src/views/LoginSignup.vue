@@ -5,33 +5,6 @@
     </section>
     <div class="login-signup-wrapper">
       <p>To continue, {{ isLogin ? 'login' : 'sign up' }} to Satisfy.</p>
-      <!-- <section class="login-out-src">
-        <div class="login-out-src-btn facebook">
-          <div>
-            <span>{{isLogin?'CONTINUE':'SIGN UP'}} WITH FACEBOOK
-            </span>
-            <div class="facebook-icon" v-html="getSvg('facebook')"></div>
-          </div>
-        </div>
-        <div class="login-out-src-btn google">
-          <div>
-            <span>{{isLogin?'CONTINUE':'SIGN UP'}} WITH GOOGLE</span>
-            <span class="google-icon-img"></span>
-          </div>
-        </div>  
-        <div class="or">
-          <hr />
-          <span>OR</span>
-          <hr />
-        </div>
-      </section> -->
-      <!-- <div v-if="loggedinUser">
-      <h3>
-        Loggedin User:
-        {{ loggedinUser.fullname }}
-        <button @click="doLogout">Logout</button>
-      </h3>
-    </div> -->
       <section v-if="isLogin" class="login-form">
         <form @submit.prevent="doLogin">
           <p :class="isInvalid ? 'invalid' : ''">Username</p>
@@ -72,39 +45,11 @@
             <div @click="handleEye" v-else :class="isEyeClicked ? 'clicked' : ''" class="eye-icon" v-html="getSvg('eye')">
             </div>
           </div>
-          <!-- <option value="">Select User</option>
-          <option v-for="user in users" :key="user._id" :value="user.username">{{ user.fullname }}</option> -->
-
-          <!-- <input type="text" v-model="loginCred.username" placeholder="User name" />
-            <input
-            type="text"
-            v-model="loginCred.password"
-            placeholder="Password"
-            /> -->
           <button style="color:black">Sign up</button>
 
         </form>
         <hr />
       </section>
-      <!-- <form @submit.prevent="doSignup">
-      <h2>Signup</h2>
-      <input type="text" v-model="signupCred.fullname" placeholder="Your full name" />
-      <input type="text" v-model="signupCred.username" placeholder="Username" />
-      <input type="password" v-model="signupCred.password" placeholder="Password" />
-      <ImgUploader @uploaded="onUploaded" />
-      <button style="color:black">Signup</button>
-    </form> -->
-      <!-- <details>
-      <summary>
-        Admin Section
-      </summary>
-      <ul>
-        <li v-for="user in users" :key="user._id">
-          <pre>{{ user }}</pre>
-          <button @click="removeUser(user._id)">x</button>
-        </li>
-      </ul>
-    </details> -->
     </div>
   </section>
 </template>
@@ -147,8 +92,8 @@ export default {
         return
       }
       try {
-        await this.$store.dispatch({ type: 'setUserStations' })
         await this.$store.dispatch({ type: "login", userCred: this.loginCred })
+        await this.$store.dispatch({ type: 'setUserStations' })
         this.$router.push('/')
       } catch (err) {
         console.log(err)

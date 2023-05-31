@@ -1,6 +1,4 @@
-import { storageService } from '../services/async-storage.service';
 import { stationService } from '../services/station.service';
-// import { stationService } from '../services/station.service'
 
 export function getActionRemoveStation(stationId) {
   return {
@@ -36,13 +34,11 @@ export const stationStore = {
 
     isFilterShown: false,
     currentRoute: '',
-    // labels: stationService.getLabels(),
     filterBy: {
       labels: '',
       sort: 'name',
     },
     labels: stationService.getLabels(),
-    // labels: []
   },
   getters: {
     currColor: (state) => {
@@ -85,7 +81,6 @@ export const stationStore = {
       state.stations.splice(idx, 1, station);
     },
     removeStation(state, { stationId }) {
-      // state.stations = state.stations.filter((station) => station._id !== stationId);
       const idx = state.stations.findIndex((station) => station._id === stationId);
       state.stations.splice(idx, 1);
     },

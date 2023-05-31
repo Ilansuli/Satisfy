@@ -1,27 +1,12 @@
 <template>
-  <!-- <section v-if="isLoading">
-    <div class="loader">
-      <div class="ball"></div>
-      <div class="ball"></div>
-      <div class="ball"></div>
-    </div>
-  </section> -->
-
-  <SongSearchList class="search-page-search-list" @setSong="setSong" v-if="songs" :songs="songs" />
-
+  <SongSearchPage  @setSong="setSong" v-if="firstFourSongs" :firstFourSongs="firstFourSongs" />
   <section v-else class="labels-list-container">
-    >>>>>>> 3c1f4cd9daa6243093eed24459b50c60d00736dd
     <h1>Browse all</h1>
     <div class="labels-list">
-      <article
-        class="label-container"
-        :class="getRandomColorClass(index)"
-        v-for="(label, index) in labels"
-        @click="setLabel(label)"
-        :key="index"
-      >
+      <article class="label-container" :class="getRandomColorClass(index)" v-for="(label, index) in labels"
+        @click="setLabel(label)" :key="index">
         <img :src="label.imgUrl" />
-        <h2>{{ label.name }}</h2>
+        <h2 class="label-container-name">{{ label.name }}</h2>
       </article>
     </div>
   </section>
@@ -32,12 +17,13 @@ import { utilService } from '../services/util.service.js';
 import { getSongs } from '../services/songService.js';
 
 import SongSearchList from '../cmps/SongSearchList.vue';
+import SongSearchPage from './SongSearchPage.vue';
 
 export default {
   name: 'Search Page',
   data() {
     return {
-      songs: null,
+      firstFourSongs: null,
       isLoading: true,
     };
   },
@@ -56,9 +42,10 @@ export default {
     '$route.query': {
       async handler() {
         const { query } = this.$route.query;
-        console.log(getSongs(query));
         if (query) {
-          this.songs = await getSongs(query);
+          const songs = await getSongs(query);
+          console.log(songs)
+          this.firstFourSongs = songs.slice(0,4)
         }
         this.isSearchPage = this.$route.path === '/search' ? true : false;
       },
@@ -112,9 +99,10 @@ export default {
       return colors[randomIdx];
     },
   },
-  created() {},
+  created() { },
   components: {
     SongSearchList,
-  },
+    SongSearchPage
+},
 };
 </script>

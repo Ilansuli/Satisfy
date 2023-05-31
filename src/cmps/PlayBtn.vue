@@ -17,6 +17,7 @@ export default {
   },
   methods: {
     setSong() {
+     
       const song = this.station._id === 'likedSongs' ?
         this.loggedinUser.likedSongs[0] :
         this.station.songs[0]

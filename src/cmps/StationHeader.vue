@@ -1,27 +1,26 @@
 <template>
   <header class="station-details-header">
-    <div class="img-wrapper" :class="station.isAddedByUser ? '' : 'not-custom'">
-      <article class="choose-photo">
-        <div class="pencil-icon" v-html="getSvg('pencil')"></div>
+    <div class="img-wrapper" >
+      <article :class="station.isAddedByUser ? 'custom' : 'not-custom'" class="choose-photo">
+        <div  class="pencil-icon" v-html="getSvg('pencil')"></div>
         <span>Choose Photo</span>
-        <ImgUploader v-if="station.isAddedByUser" @updateImgUrl="updateImgUrl" />
+        <ImgUploader v-if="station.isAddedByUser" @updateImgUrl="updateImgUrl"  />
       </article>
 
       <div class="img-container">
-        <img v-if="station.imgUrl" ref="image" :src="station.imgUrl" alt="" crossorigin="anonymous" />
-        <img v-else
-          src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1679567005/Spotify/WhatsApp_Image_2023-03-23_at_12.22.38_jexkcy.jpg" />
+        <img ref="image" :src="station.imgUrl" alt="" crossorigin="anonymous" />
+        
       </div>
     </div>
     <div class="station-details-header-info">
       <span class="playlist">Playlist</span>
-      <h1 class="station-details-header-title" @click="handleStationEdit($event)">{{ station.title }}</h1>
+      <h1 class="station-details-header-title"  :class="station.isAddedByUser ? 'custom' : 'not-custom'" @click.stop="openStationEdit">{{ station.title }}</h1>
       <!-- <div>
         <span v-if="station.desc" v-for="(d, idx) in station.desc" :key="idx" class="station-preview-desc">{{ d }}
           <span v-if="idx < 2">{{ ',' }} {{ '&nbsp;' }} </span>
         </span>
       </div> -->
-      <p class="user-desc" @click="handleStationEdit($event)">{{ station.userDesc }}</p>
+      <p class="user-desc" @click.stop="openStationEdit">{{ station.userDesc }}</p>
       <RouterLink :to="station.isAddedByUser ? '/library' : '/station'" class="by-user">
         <div v-if="!station.isAddedByUser" class="headphones-icon" v-html="getSvg('smallHeadphones')"></div>
         <p class="username">
@@ -33,7 +32,7 @@
         </span>
       </RouterLink>
     </div>
-    <Modal @updateImgUrl="updateImgUrl" @onCloseEditModal="onCloseEditModal" v-if="isStationEditShown" :station="station" />
+    <StationEditModal @updateImgUrl="updateImgUrl" @onCloseEditModal="onCloseEditModal" v-if="isStationEditShown" :station="station" />
   </header>
 </template>
 
@@ -41,7 +40,7 @@
 import { FastAverageColor } from 'fast-average-color';
 import { svgService } from '../services/svg.service.js';
 import ImgUploader from '../cmps/ImgUploader.vue';
-import Modal from './Modal.vue';
+import StationEditModal from './StationEditModal.vue';
 
 export default {
   name: 'Station Header',
@@ -71,10 +70,9 @@ export default {
   //   image.removeEventListener('load');
   // },
   methods: {
-    handleStationEdit(event) {
-      event.stopPropagation()
+    openStationEdit() {
       if (!this.station.isAddedByUser) return;
-      this.$store.commit({ type: 'handleStationEdit' })
+      this.$store.commit({ type: 'openStationEdit' })
     },
     onCloseEditModal() {
       this.isEdit = false;
@@ -115,7 +113,7 @@ export default {
     this.loggedInUser = this.$store.getters.loggedinUser;
   },
   components: {
-    Modal,
+    StationEditModal,
     ImgUploader,
   },
 };

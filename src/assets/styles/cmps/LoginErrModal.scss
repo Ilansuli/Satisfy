@@ -1,0 +1,119 @@
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.login-modal-wrapper {
+    position: absolute;
+    z-index: 9999;
+    animation: slideInRight 0.090s ease-in, fadeIn 0.2s ease-in;
+}
+
+.create-playlist-err {
+    left: 149px;
+    top: -8px;
+}
+
+.liked-err {
+    left: 130px;
+    top: -8px;
+}
+
+.library-err {
+    left: 126px;
+    top: -7px;
+}
+
+.login-modal {
+    background-color: #0d72ea;
+    border-radius: 8px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 16px;
+    width: 332px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -7.8px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #fff;
+        border-right-color: #0d72ea;
+        border-left: none;
+    }
+
+    &-title {
+        margin: 0;
+        font-size: 18px;
+        font-family: 'Circular Bold';
+        margin-block-end: 8px;
+    }
+
+    &-body {
+        margin: 0;
+        color: inherit;
+        font-size: 13px;
+    }
+
+    &-btns {
+        display: flex;
+        justify-content: flex-end;
+        margin-block-start: 24px;
+        gap: 16px;
+        align-items: center;
+    }
+
+    &-close-btn {
+        color: #a7a7a7;
+
+        &:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+    }
+
+    &-login-btn {
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 100vw;
+        margin-inline-end: 3px;
+        display: flex;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        span {
+            font-family: "Circular Black";
+            color: black;
+            padding-inline: 16px;
+            padding-block: 6px;
+
+          
+        }
+    }
+}

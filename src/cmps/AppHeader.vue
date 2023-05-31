@@ -8,11 +8,9 @@
         <div class="header-btn btn-prev icon" v-html="getSvg('arrowRight')"></div>
       </button>
     </section>
-    <PlayBtn
-      :style="{ opacity: 1 - this.$store.getters.opacity - 3 }"
-      :station="currStation"
-      v-if="showPlayBtn"
-    />
+    <PlayBtn :style="{ opacity: 1 - this.$store.getters.opacity - 3 }" :station="currStation" v-if="showPlayBtn" />
+    <span class="station-title" :style="{ opacity: 1 - this.$store.getters.opacity - 3 }" v-if="showPlayBtn">{{
+      stationTitle }}</span>
     <SongSearch class="header-search" @setSearch="setSearch" v-if="isSearch" />
     <div v-else class="header-search-placeholder"></div>
     <!-- <SongSearchList class="station-details-search" @setFilter="setFilter" /> -->
@@ -30,7 +28,7 @@
       </RouterLink>
 
       <div class="arrow-down-icon-container">
-        <div @click="openUserOptions" class="arrow-down-icon" v-html="getSvg('arrowDownFill')"></div>
+        <div @click.stop="openUserOptions" class="arrow-down-icon" v-html="getSvg('arrowDownFill')"></div>
       </div>
       <ul v-if="isUserOptionsShown" class="user-options-menu">
         <li @click="doLogout">Logout</li>
@@ -51,6 +49,7 @@
 <script>
 import { svgService } from '../services/svg.service.js';
 import SongSearchList from './SongSearchList.vue';
+import { stationService } from '../services/station.service.js';
 import SongSearch from './SongSearch.vue';
 import PlayBtn from './PlayBtn.vue';
 export default {
@@ -58,12 +57,12 @@ export default {
     return {
       isShowLogin: true,
       isShowSignUp: true,
+      stationTitle: ''
     };
   },
   methods: {
-    openUserOptions(event) {
-      event.stopPropagation();
-      this.$store.commit({ type: 'handleUserOptions' });
+    openUserOptions() {
+      this.$store.commit({ type: 'openUserOptions' });
     },
     getSvg(iconName) {
       return svgService.getSvg(iconName);
@@ -129,6 +128,20 @@ export default {
         } else {
           this.isShowLogin = true;
           this.isShowSignUp = true;
+        }
+      },
+      immediate: true,
+    },
+    '$route.params': {
+      async handler() {
+        const { stationId } = this.$route.params;
+        console.log('stationId', stationId)
+        try {
+          const station = await stationService.getById(stationId);
+          console.log('station', station)
+          this.stationTitle = station.title
+        } catch (error) {
+          console.log('Error fetching station: ', error);
         }
       },
       immediate: true,

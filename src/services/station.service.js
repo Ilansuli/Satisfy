@@ -78,7 +78,7 @@ function getEmptyStation() {
         title: 'My Playlist',
         userDesc: '',
         imgUrl:
-            'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679567005/Spotify/WhatsApp_Image_2023-03-23_at_12.22.38_jexkcy.jpg',
+            'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683826469/WhatsApp_Image_2023-05-11_at_20.32.48_ybb9ov.jpg',
         songs: [],
         isAddedByUser: true,
     }
@@ -96,179 +96,179 @@ function getEmptySong() {
         duration: 0,
         addedAt: Date.now(),
     };
+    
 }
-
 function getLabels() {
     return [
         {
             name: 'Pop',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477156/Spotify/Pop_uaqlpr.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Pop_g7mqwn.jpg',
         },
         {
             name: 'Mood-Booster',
             imgUrl:
-                'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477174/Spotify/moodbooster_esxfs6.jpg',
+                'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Mood_yqq19z.jpg',
         },
         {
             name: 'Latino',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477166/Spotify/latino_najwkb.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Latin_nimomc.jpg',
         },
         {
             name: 'Rock',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477163/Spotify/Rock_cdizyt.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Rock_ee61mk.jpg',
         },
         {
             name: 'Rap',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508657/Rap_gvt5v2.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Hip-Hop_fo6kbo.jpg',
         },
         {
             name: 'K-Pop',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679478366/Spotify/K-Pop_lfh88n.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/K-Pop_l8dizv.jpg',
         },
         {
             name: 'Dance/Electronic',
             imgUrl:
-                'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679491299/Spotify/DanceElectroincs_b5sonr.jpg',
+                'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/DanceElectorincs_qxedq7.jpg',
         },
         {
             name: 'Sleep',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679830075/sleep_xdzs9m.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/Sleep_cpxoaa.jpg',
         },
         {
             name: 'R&B',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679830075/R_B_drd8gk.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/R_B_bjdzcf.jpg',
         },
         {
             name: 'Anime',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679830071/anime_he2bov.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/Anime_btb9hc.jpg',
         },
         {
             name: 'Focus',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679830071/focus_w1fi2z.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Focus_d1avyn.jpg',
         },
         {
             name: 'Stress Relief',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679830071/stress-relief_cjozfy.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728053/Stress_Relief_sfslpw.jpg',
         },
         {
             name: 'Jazz',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506736/Jazz_iw4fm5.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/Jazz_zgbtbt.jpg',
         },
         {
             name: 'Metal',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Metal_w1buqt.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Metal_tidcaf.jpg',
         },
         {
             name: 'Love',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Love_bwlqni.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728875/Love_iflqwr.jpg',
         },
         {
             name: 'Party',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Party_ooyycb.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/Party_nyroqe.jpg',
         },
         {
             name: 'Country',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Country_dge4yg.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Country_r1ivgb.jpg',
         },
         {
             name: 'Chill',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Chille_hsbqrb.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/Chill_ryfb1u.jpg',
         },
         {
             name: 'Workout',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Workout.jps_g8fy8e.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Workout_tjxlzd.jpg',
         },
         {
             name: 'Indie',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506736/Indie_armukg.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683729066/Indie_qkuqnb.jpg',
         },
         {
             name: 'Gaming',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Gaming_vqkmtl.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728875/Gaming_fuscfy.jpg',
         },
         {
             name: 'Folk & Acoustic',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Folk_Acoustic_uakdhs.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Folk_Acoustic_qsvi3c.jpg',
         },
         {
             name: 'Soul',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Soul_ifrei8.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Soul_v4qbcm.jpg',
         },
         {
             name: 'Instrumental',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506726/Instrumental_e8yilu.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Instrumental_p3m6kq.jpg',
         },
         {
             name: 'Summer',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506727/Summer_arx3vn.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Summber_iz5eqy.jpg',
         },
         {
             name: 'Fresh Finds',
-            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680506727/Fresh-Finds_fdtshe.jpg',
+            imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728875/FreshFInds_lqkqls.jpg',
         },
         {
             name: 'New releases',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508657/New-Releases_esi5dj.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728879/NewRealese_sjs1g3.jpg'
         },
         {
             name: 'Hip-Hop',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679476992/Spotify/Rap_q7jmtn.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Hip-Hop_fo6kbo.jpg'
         },
         {
             name: 'At Home',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508657/At-Home_hy6fix.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728879/AtHome_cfiqco.jpg'
         },
         {
             name: 'Decades',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508657/Decades_km4zfg.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/Decades_r4i3io.jpg'
         },
         {
             name: 'Wellness',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508664/Wellness_op6kps.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728879/Wellness_l2hhfh.jpg'
         },
         {
             name: 'Trending',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508663/Trending_hq0xgz.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728879/Trending_drtpec.jpg'
         },
         {
             name: 'TV & Movies',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508663/TV_Movies_hcfma7.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Tv_Shows_dfh9mf.jpg'
         },
         {
             name: 'Classical',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508664/Classical_pmhtq5.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727388/Classical_pkpph1.jpg'
         },
         {   
             name: 'Kids & Family',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508664/Kids_Family_zfdzcs.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728875/Kids_rjosan.jpg'
         },
         {
             name: 'Punk',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508664/Punk_ome0im.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Punk_rcdomz.jpg'
         },
         {
             name: 'Blues',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508664/Blues_q32smi.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728876/Blues_uhpztk.jpg'
         },
         {
             name: 'Afro',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508664/Afro_qom9g5.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Afro_tbmtz7.jpg'
         },
         {
             name: 'Travel',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508663/Travel_ysfll5.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728876/Travel_xre3or.jpg'
         },
         {
             name: 'Tastemaker',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508663/Tastemaker_qecwsj.png'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728877/TasteMakers_ntmh4n.png'
         },
         {
             name: 'Caribbean',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508657/Decades_km4zfg.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728885/Carribean_sny0zf.jpg'
         },
         {
             name: 'Cooking & Dining',
-            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1680508663/Cooking_Dining_k6r9jh.jpg'
+            imgUrl:'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683728885/Cooking_Dining_fqckg7.jpg'
         },
 
 

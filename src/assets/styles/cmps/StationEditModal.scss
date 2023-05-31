@@ -61,10 +61,10 @@
             margin-top: -4px;
             fill: #c5c5c5;
             width: 32px;
-            height: 32px;
-
             .x-icon {
                 fill: #a3a3a3;
+                padding-block: 2px;
+                margin-block-start: 3px;
             }
 
             &:hover {

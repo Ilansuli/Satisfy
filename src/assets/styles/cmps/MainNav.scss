@@ -24,6 +24,9 @@ $secondary-color: #aaa;
         a {
             justify-self: center;
         }
+        .btn-nav-library{
+            padding-inline-start: 62px;
+        }
     }
 
     z-index: 310;
@@ -167,7 +170,7 @@ hr {
         letter-spacing: 1px;
         font-size: 13px;
     }
-
+    position: relative;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -205,6 +208,8 @@ hr {
     align-items: center;
     gap: 10px;
     margin-block-end: 8px;
+    position: relative;
+
 }
 
 .nav-search {

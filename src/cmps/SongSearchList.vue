@@ -1,5 +1,5 @@
 <template>
-  <section class="song-search-list">
+  <section class="song-search-page-list">
     <ul v-if="songs" :class="setSearchClass" class="song-search-results-wrap">
       <SongSearchPreview v-for="(song, index) in songs" @addSong="addSong" @setSong="setSong" :song="song" :key="index" />
     </ul>
@@ -9,7 +9,6 @@
 <script>
 import { stationService } from '../services/station.service.js';
 import { svgService } from '../services/svg.service.js';
-import { eventBus } from '../services/event-bus.service.js';
 import SongSearchPreview from './SongSearchPreview.vue';
 
 export default {
@@ -28,6 +27,7 @@ export default {
     };
   },
   async created() {
+    console.log(this.songs)
     const { stationId } = this.$route.params;
     try {
       const station = await stationService.getById(stationId);

@@ -1,41 +1,32 @@
 <template>
-  <section v-if="user">
-    <h1>User Details - Fullname {{ user.fullname }}</h1>
-    <h3>Nickname - {{ user.username }}</h3>
-    <section v-if="isMe">
-      <h4>Its me</h4>
-      <button @click="doLogout">Logout</button>
-    </section>
-    <img style="max-width: 200px;" :src="user.imgUrl" />
-    <ul>
-      <li v-for="review in user.givenReviews" :key="review._id">
-        {{ review.txt }}
-        <RouterLink :to="`/user/${review.aboutUser._id}`">
-          About {{ review.aboutUser.fullname }}
-        </RouterLink>
-      </li>
-    </ul>
+  <section class="user-details" v-if="user">
+    <h1>{{ user.fullname }}'s Profile</h1>
 
-    <details>
-      <summary>Full JSON</summary>
-      <pre>{{ user }}</pre>
-    </details>
+    <div class="edit-modal-img">
+      <article class="choose-photo">
+        <div class="pencil-icon" v-html="getSvg('pencil')"></div>
+        <span>Choose Photo</span>
+        <ImgUploader @updateImgUrl="updateImgUrl" />
+      </article>
+
+      <div class="img-container">
+        <img v-if="user.imgUrl" ref="image" :src="user.imgUrl" alt="" crossorigin="anonymous" />
+        <img v-else
+          src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683826469/WhatsApp_Image_2023-05-11_at_20.32.48_ybb9ov.jpg" />
+      </div>
+    </div>
+    <!-- <img style="max-width: 200px; border-radius: 50%;" :src="user.imgUrl" /> -->
+    <h3>Nickname - {{ user.username }}</h3>
+
+    <button class="logout-btn" @click="doLogout">Logout</button>
+
   </section>
 </template>
-
 <script>
-// import {userService} from '../services/user.service'
-
+import ImgUploader from '../cmps/ImgUploader.vue'
+import { svgService } from '../services/svg.service'
 export default {
-  data() {
-    return {
-      // user: null
-    }
-  },
-  async created() {
-    // const user = await userService.getById(id)
-    // this.user = user
-  },
+
   watch: {
     userId: {
       handler() {
@@ -58,7 +49,21 @@ export default {
     },
   },
   methods: {
-
+    doLogout() {
+      this.$store.dispatch({ type: 'logout' });
+      this.$router.push('/');
+    },
+    getSvg(iconName) {
+      return svgService.getSvg(iconName)
+    },
+    updateImgUrl(imgUrl) {
+      if (!imgUrl) return;
+      this.user.imgUrl = imgUrl;
+      this.$store.dispatch({ type: 'updateUser', user: this.user });
+    },
+  },
+  components: {
+    ImgUploader
   }
 }
 </script>

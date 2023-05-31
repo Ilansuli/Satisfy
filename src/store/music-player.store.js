@@ -3,9 +3,6 @@ import { utilService } from '../services/util.service.js'
 export const musicPlayerStore = {
     state: {
         currentSong: {
-            // imgUrl: 'https://i.ytimg.com/vi/Zi_XLOBDo_Y/default.jpg',
-            // title: 'Billie Jean',
-            // videoId: 'Zi_XLOBDo_Y',
         },
         currentStation: {},
         isPlaying: false,
@@ -28,12 +25,9 @@ export const musicPlayerStore = {
         },
         pauseResume(state) {
             this.isPlaying = !this.isPlaying
-            // if (this.isPlaying) this.$refs.youtube.playVideo()
             if (this.isPlaying) state.youtubeRef.playVideo()
-            // else this.$refs.youtube.pauseVideo()
             else state.youtubeRef.pauseVideo()
         },
-        //TODO: COMBINE NEXT AND PREV FUNCTIONS
         setNextSong(state) {
             if (!state.currentSong) return
             const currentSongIdx = state.currentStation.songs.findIndex(song => song._id === state.currentSong._id)
@@ -95,7 +89,6 @@ export const musicPlayerStore = {
         },
         setStation({ commit }, { station }) {
             commit({ type: 'setCurrentStation', station })
-            // commit({ type: 'setCurrentSong', song: station.songs[0] })
         },
         pauseResume({ commit }) {
             commit({ type: 'pauseResume' })

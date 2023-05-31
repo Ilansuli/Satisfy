@@ -44,9 +44,8 @@ export default {
   },
   methods: {
     closeModals() {
-      this.$store.commit({ type: 'closeUserOptions' })
-      this.$store.commit({ type: 'closeStationOptions' })
-      this.$store.commit({ type: 'closeStationEdit' })
+      this.$store.commit({ type: 'closeModals' })
+   
     },
     handleScroll() {
       const appMain = this.$refs.appMain;

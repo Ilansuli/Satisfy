@@ -62,3 +62,109 @@
     }
 
 }
+
+
+
+
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  
+    .ball {
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: white;
+      animation: bounce 1.2s infinite ease-in-out;
+  
+      &:nth-child(2) {
+        animation-delay: -0.32s;
+      }
+  
+      &:nth-child(3) {
+        animation-delay: -0.16s;
+      }
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  // .station-details {
+  //   display: flex;
+  //   flex-direction: column;
+  //   padding: 16px;
+  
+  //   .station-details-body {
+  //     display: flex;
+  //     align-items: center;
+  
+  //     .options-icon {
+  //       margin-left: 8px;
+  //       cursor: pointer;
+  //     }
+  
+  //     .options-menu {
+  //       display: none;
+  //       position: absolute;
+  //       background-color: white;
+  //       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  //       padding: 8px 0;
+  //       margin: 0;
+  //       z-index: 10;
+  
+  //       li {
+  //         padding: 8px 16px;
+  //       list-style: none;
+  //         cursor: pointer;
+  //         &:hover {
+  //           background-color: hsla(0,0%,100%,.1);
+  //         }
+  //       }
+  //     }
+  //   }
+  
+  //   .song-search-header {
+  //     margin-top: 32px;
+  
+  //     h1 {
+  //       margin-bottom: 16px;
+  //     }
+  //   }
+  
+  //   .search-results-list {
+  //     margin-top: 16px;
+  //   }
+  
+  //   hr {
+  //     border: 0;
+  //     height: 1px;
+  //     background: lightgray;
+  //     margin: 32px 0;
+  //   }
+  
+  //   .placeholder {
+  //     height: 32px;
+  //   }
+  // }
+  
+  // [v-else-if='station'].station-details .options-menu {
+  //   display: block;
+  // }

@@ -55,13 +55,13 @@
 }
 
 .header-search {
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
         border-radius: 8px;
         justify-self: start;
-        width: 120%;
-        margin-inline-start: -75px
-        // width: 120%;
+        width: 75%;
+        margin-inline-start: -75px ;
     }
+
     display: flex;
     background-color: white;
     border: 0;

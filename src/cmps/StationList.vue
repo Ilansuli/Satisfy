@@ -13,9 +13,9 @@
   </div> -->
   <h2 class="greeting">{{ greetings }}</h2>
   <section class="station-list-top-content-container">
-    <RouterLink
+    <button
       @mouseover="this.$store.dispatch('setCurrColor', 'rgb(28, 11, 59)')"
-      to="/liked"
+      @click="onRouterLiked"
       class="top-content"
     >
       <img
@@ -26,7 +26,7 @@
       <!-- <div class="top-content-content-internal-wrapper"> -->
       <h1>Liked Songs</h1>
       <!-- </div> -->
-    </RouterLink>
+    </button>
     <RouterLink to="/station/6423e736d6a1082554c7b0a2" class="top-content">
       <img
         class="top-content-img"
@@ -93,6 +93,10 @@ export default {
     this.$store.dispatch('setCurrColor', 'rgb(0,0,0)');
   },
   methods: {
+    onRouterLiked(){
+      if(!this.loggedinUser)return console.log('user is not loggedin')//TODO: ADD CONTINUE AS GUEST MODAL
+      return this.$router.push('/liked')
+    },
     goToClickedStation(stationTitle) {
       this.$store.dispatch('setHeaderColor', `rgba(28, 17, 56, ${1 - opacity})`);
 

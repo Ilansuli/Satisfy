@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import Chat from './views/Chat.vue'
 import StationIndex from './views/StationIndex.vue'
 import LikedSongs from './views/LikedSongs.vue'
 import LoginSignup from './views/LoginSignup.vue'
@@ -29,11 +28,6 @@ const routes = [
     path: '/station/:stationId',
     name: 'StationDetails',
     component: StationDetails
-  },
-  {
-    path: '/chat',
-    name: 'Chat',
-    component: Chat
   },
   {
     path: '/login',

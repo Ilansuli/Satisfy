@@ -3,7 +3,9 @@
     <section :style="{ backgroundColor: this.$store.getters.currColor }" ref="song-info" v-if="videoId" class="song-info">
       <img :src="imgUrl" alt="" />
       <div class="song-info-name">
-        <span class="title">{{ shortenedTitle(songTitle) }}</span>
+        <div class="title">
+          <div >{{ songTitle }}</div>
+        </div>
         <span class="artist">{{ songArtist }}</span>
         <div class="play-pause-icon-mobile" @click="onPauseResume"
           v-html="isPlaying ? getSvg('pause') : getSvg('resume')"></div>

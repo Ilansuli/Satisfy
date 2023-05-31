@@ -9,7 +9,7 @@
 	margin-block-start: 1.6em;
 	margin-block-end: 1.3em;
 }
-h2{
+.greeting{
 @media (max-width: 800px) {
     margin-block-start: 2em;
 	
@@ -61,6 +61,7 @@ h2{
 	text-align: ltr;
 
 	.top-content {
+		cursor: pointer;
 		h1 {
 			margin-inline-start: 1em;
 		}

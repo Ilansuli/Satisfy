@@ -9,8 +9,9 @@
     align-items: center;
     grid-auto-flow: column;
     grid-auto-columns: 120px minmax(200px, 364px) 1fr;
+
     @media (max-width: 1000px) {
-        
+
         padding: 16px;
     }
 
@@ -30,24 +31,27 @@
             display: none;
             opacity: 0;
         }
-        .loggedin-user{
-                position: absolute;
-                right: 16px;
+
+        .loggedin-user {
+            position: absolute;
+            right: 16px;
         }
     }
 
     .header>* {
         opacity: 1;
     }
-    .play-btn{
+
+    .play-btn {
         @media (min-width: 600px) {
             margin-inline-start: 105px;
-            
+
         }
-     position: absolute;
-     margin-inline-start: 64px;
-     height: 50px;
-     width: 50px;
+
+        position: absolute;
+        margin-inline-start: 64px;
+        height: 50px;
+        width: 50px;
     }
 
 
@@ -230,6 +234,7 @@
         a:hover {
             text-decoration: none;
         }
+
     }
 
     nav {
@@ -249,5 +254,17 @@
 
     .header-img {
         border-radius: 50%;
+    }
+
+    .station-title {
+        margin-inline-start: 48px;
+        font-family: Circular Bold;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-shadow: -1px -1px 0 #d0d0d0, 1px -1px 0 #d0d0d0, -1px 1px 0 #d0d0d0, 1px 1px 0 #d0d0d0;
+
+        @media (max-width:600px) {
+            display: none;
+        }
     }
 }

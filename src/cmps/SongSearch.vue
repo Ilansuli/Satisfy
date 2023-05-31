@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { eventBus } from '../services/event-bus.service';
 import { svgService } from '../services/svg.service.js';
 
 export default {
@@ -16,7 +15,6 @@ export default {
         return {
             query: '',
             isSearchPage: false
-            // videos:[]
         }
     },
     methods: {

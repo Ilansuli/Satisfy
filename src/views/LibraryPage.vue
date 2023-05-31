@@ -29,9 +29,6 @@ export default {
             stations: null
         }
     },
-    methods: {
-
-    },
     computed: {
         userStations() {
             if (this.stations) {

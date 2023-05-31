@@ -1,0 +1,127 @@
+.song-search-page {
+    &-main {
+        padding-block-start: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 284px 1fr;
+        @media (max-width:1150px) {
+           grid-template-rows: none;
+        }
+        .first-section {
+            grid-column: 1/span2;
+            display: grid;
+            gap: 24px;
+            grid-auto-flow: column;
+            grid-template-columns: 1.2fr 2fr;
+            @media (max-width:1150px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .second-section{
+            grid-column: 1/span2;
+            h2{
+                margin: 0;
+                margin-block-start: 29px;
+                margin-block-end: 17px;
+            }
+        }
+
+        .top-result {
+            min-width: 342px;
+            width: 100%;
+
+            &-title {
+                font-size: 24px;
+            }
+
+            &-preview {
+                background-color: #181818;
+                width: 100%;
+                height: 80%;
+                align-self: center;
+                padding: 20px;
+                border-radius: 6px;
+                transition: background-color .3s ease;
+                position: relative;
+                @media (max-width:1150px) {
+                    width: 60%;
+                }
+                @media (max-width:600px) {
+                    width: 100%;
+                }
+                &:hover{
+                    background: #282828;
+                }
+                h2 {
+                    margin-block-start: 13px;
+                    font-size: 32px;
+                    margin-block-end: 8px;
+                    white-space: pre;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                
+                }
+
+                span {
+                    background-color: rgba(0, 0, 0, .2);
+                    border-radius: 500px;
+                    display: inline-block;
+                    padding: 4px 12px;
+                    font-size: 14px;
+                }
+                .play-btn {
+                    width: 48px;
+                    height: 48px;
+                    opacity: 0;
+                    display: block;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 2.8%;
+                    margin-block-end: 6px;
+                    transition: opacity 165ms, bottom 165ms ease-in;
+                    svg{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+    
+                &:hover .play-btn {
+                    opacity: 1;
+                    bottom: 10px;
+                    animation: fade-in 0.3s ease-in forwards;
+                }
+            }
+
+            &-img-wrap {
+                width: 6rem;
+
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .songs-result {
+            min-width: 342px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            &-title {
+                font-size: 24px;
+                padding-inline-start: 14px;
+            }
+        }
+
+        .song-search-results-wrap {
+            display: flex;
+            flex-direction: column;
+            padding-block-end: 0;
+        }
+    }
+}

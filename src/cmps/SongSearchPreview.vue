@@ -10,7 +10,7 @@
             </div>
 
 
-            <div>
+            <div class="song-search-preview-details">
                 <h3>{{ songTitle }}</h3>
                 <h6 class="song-search-preview-artist" :class="getClass">{{song.artist}}</h6>
             </div>

@@ -6,17 +6,12 @@
 	h1{
 		letter-spacing: -1px;
 	}
-	h2{
-		margin: 0;
-		font-size: 24px;
-		font-family: 'Circular Black';
-		letter-spacing: -1.2px;	}
 	.labels-list {
 		@media (max-width: 1000px) {
 			width: calc(100dvw - 240px);
-	}
+		}
 
-	@media (max-width: 600px) {
+		@media (max-width: 600px) {
 		grid-template-columns: repeat(2, minmax(160px, 1fr));
         gap: 18px;
 		.label-container {
@@ -24,6 +19,7 @@
 			aspect-ratio: 1.8/1;
 			padding: 0.5em;
 
+		
 			img {
 				right: -10px;
 				height: 80px;
@@ -71,12 +67,17 @@
 	aspect-ratio: 1;
 	padding: 1.1em;
 	overflow: hidden;
-	position: relative;
 	border-radius: 8px;
 	background-color: green;
 	cursor: pointer;
+	position: relative;
 	overflow-wrap: break-word;
-
+	&-name{
+		margin: 0;
+		font-size: 24px;
+		font-family: 'Circular Black';
+		letter-spacing: -1.2px;
+		}
 
 	img {
 		right: 0;

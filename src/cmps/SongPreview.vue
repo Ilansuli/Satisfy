@@ -2,7 +2,7 @@
     <article :class="getClass" class="song-preview-main" @click="handleClick" @mouseover="isHover = true"
         @mouseleave="isHover = false">
         <div class="played-song-gif" @click="setSong(), setStation()" v-if="isPlaying && currSong._id === song._id" >
-            <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1680551630/equaliser-animated-green.f5eb96f2_pu9wsp.gif" alt="">
+            <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683729372/Song_hoitzd.gif" alt="">
         </div>
         <div v-else v-html="playBtnSvg" :class="getPlayedSongClass" class="play-song-icon" @click="setSong(), setStation()"></div>
         <!-- <span v-if="isHover">5</span> -->

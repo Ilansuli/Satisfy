@@ -4,7 +4,7 @@
     <!-- <label for="imgUpload">{{ uploadMsg }}</label> -->
     <!-- <pre>{{  }}</pre> -->
     
-    <input type="file" @change="uploadImg" accept="img/*" id="imgUpload" multiple/>
+    <input style="cursor:pointer;" type="file" @change="uploadImg" accept="img/*" id="imgUpload" multiple/>
   </div>
 </template>
 

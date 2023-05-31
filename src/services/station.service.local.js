@@ -434,33 +434,33 @@ function getLabels() {
   return [
     {
       name: 'Pop',
-      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477156/Spotify/Pop_uaqlpr.jpg',
+      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Pop_g7mqwn.jpg',
     },
     {
       name: 'Mood-Booster',
       imgUrl:
-        'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477174/Spotify/moodbooster_esxfs6.jpg',
+        'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Mood_yqq19z.jpg',
     },
     {
       name: 'Latino',
-      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477166/Spotify/latino_najwkb.jpg',
+      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Latin_nimomc.jpg',
     },
     {
       name: 'Rock',
-      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679477163/Spotify/Rock_cdizyt.jpg',
+      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Rock_ee61mk.jpg',
     },
     {
       name: 'Rap',
-      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679476992/Spotify/Rap_q7jmtn.jpg',
+      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/Hip-Hop_fo6kbo.jpg',
     },
     {
       name: 'K-Pop',
-      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679478366/Spotify/K-Pop_lfh88n.jpg',
+      imgUrl: 'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727387/K-Pop_l8dizv.jpg',
     },
     {
       name: 'Dance/Electronic',
       imgUrl:
-        'https://res.cloudinary.com/dmmsf57ko/image/upload/v1679491299/Spotify/DanceElectroincs_b5sonr.jpg',
+        'https://res.cloudinary.com/dmmsf57ko/image/upload/v1683727386/DanceElectorincs_qxedq7.jpg',
     },
     {
       name: 'Sleep',

@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="header-placeholder"></div> -->
   <section  class="station-details">
     <StationHeader class="liked-songs" @updateImgUrl="updateImgUrl" :station="station" />
     <div class="station-details-body">
@@ -9,13 +8,9 @@
     <hr />
     <div class="placeholder"></div>
   </section>
-  <!-- <section class="no-liked-songs" v-else>
-    <h1>You don't have any liked songs yet...</h1>
-  </section> -->
 </template>
 
 <script>
-//TODO: LINE 2-4 CHANGE IMG TO BE CHOSEN BY USER & CONNECT USER LINE 9
 import { stationService } from '../services/station.service.js';
 import { svgService } from '../services/svg.service.js';
 
@@ -37,7 +32,6 @@ export default {
     };
   },
   mounted() {
-
     this.$store.dispatch('setCurrColor', 'rgb(28, 11, 59)');
   },
   methods: {
@@ -74,22 +68,6 @@ export default {
       this.station.imgUrl = imgUrl;
       this.$store.dispatch({ type: 'updateStation', station: this.station });
     },
-  },
-  computed: {
-    // isLikedSongs() {
-    //   console.log('this.station.songs', this.station.songs);
-    //   return this.station.songs.length > 0;
-    // },
-    // async getStation() {
-    //   const { stationId } = this.$route.params;
-    //   // console.log('create',stationId)
-    //   try {
-    //     const station = await stationService.getById(stationId);
-    //     this.station = station;
-    //   } catch (error) {
-    //     console.log('Error fetching station: ', error);
-    //   }
-    // },
   },
   watch: {
     '$route.params': {

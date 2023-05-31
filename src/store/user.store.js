@@ -1,5 +1,5 @@
 import { userService } from '../services/user.service.js'
-import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from '../services/socket.service'
+import { socketService} from '../services/socket.service'
 import { stationService } from '../services/station.service.js'
 
 export const userStore = {
@@ -25,9 +25,6 @@ export const userStore = {
         setUsers(state, { users }) {
             state.users = users
         },
-        // setUser(state, { user }) {
-        //     state.logg = users
-        // },
         removeUser(state, { userId }) {
             state.users = state.users.filter(user => user._id !== userId)
         },
@@ -46,7 +43,6 @@ export const userStore = {
             state.userStations = userStations
         },
         removeUserStation(state, { userStationId }) {
-            // state.stations = state.stations.filter((station) => station._id !== stationId);
             const idx = state.userStations.findIndex((userStation) => userStation._id === userStationId);
             if(idx < 0) return
             state.userStations.splice(idx, 1);
@@ -98,7 +94,6 @@ export const userStore = {
             }
         },
         async loadUsers({ commit }) {
-            // TODO: loading
             try {
                 const users = await userService.getUsers()
                 commit({ type: 'setUsers', users })
@@ -166,7 +161,6 @@ export const userStore = {
                 throw err
             }
         },
-        // Keep this action for compatability with a common user.service ReactJS/VueJS
         setWatchedUser({ commit }, payload) {
             commit(payload)
         },
