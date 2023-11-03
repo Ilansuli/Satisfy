@@ -2,237 +2,232 @@ $primary-color: #fff;
 $secondary-color: #aaa;
 
 .main-nav {
-    @media (max-width:800px) {
-        width: 100vw;
-        display: grid;
-        grid-row: 3;
-        grid-column: 1/-1;
+  @media (max-width: 800px) {
+    width: 100vw;
+    display: grid;
+    grid-row: 3;
+    grid-column: 1/-1;
 
-        .actions,
-        span,
-        hr,
-        .main-nav-logo,
-        .playlist-links {
-            display: none;
-        }
-
-        .nav {
-            grid-template-columns: 0.33fr 0.33fr 0.33fr;
-            justify-content: space-evenly;
-        }
-
-        a {
-            justify-self: center;
-        }
-        .btn-nav-library{
-            padding-inline-start: 62px;
-        }
+    .actions,
+    span,
+    hr,
+    .main-nav-logo,
+    .playlist-links {
+      display: none;
     }
 
-    z-index: 310;
-    font-size: 0.8125rem;
-    min-width: 185px;
-    background-color: black;
-    color: rgb(224, 224, 224);
-    margin-block-end: 0;
-    padding-inline-start: 25px;
-    padding-inline-end: 20px;
-    grid-row: 1 / 4;
-
-    &-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding-block-start: 19px;
-
-        .headphones-icon {
-
-            svg {
-                width: 36px;
-                height: 36px;
-            }
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            color: white;
-            // margin-block-start: 15px;
-            margin: 0 0 0.1em;
-            // margin-block-end: 30px;
-        }
+    .nav {
+      justify-content: space-evenly;
+      grid-auto-flow: column;
     }
 
     a {
-        color: rgb(215, 215, 215);
+      justify-self: center;
+    }
+    .btn-nav-library {
+      // padding-inline-start: 62px;
+    }
+  }
 
-        &:hover {
-            color: white;
-            text-decoration: none;
-        }
+  z-index: 310;
+  font-size: 0.8125rem;
+  min-width: 185px;
+  background-color: black;
+  color: rgb(224, 224, 224);
+  margin-block-end: 0;
+  padding-inline-start: 25px;
+  padding-inline-end: 20px;
+  grid-row: 1 / 4;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-block-start: 19px;
+
+    .headphones-icon {
+      svg {
+        width: 36px;
+        height: 36px;
+      }
     }
 
-    .user-playlists {
-        overflow: scroll;
-        height: 261px;
-        padding-block-end: 30px;
+    h1 {
+      font-size: 1.8rem;
+      color: white;
+      // margin-block-start: 15px;
+      margin: 0 0 0.1em;
+      // margin-block-end: 30px;
+    }
+  }
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+  a {
+    color: rgb(215, 215, 215);
 
-        a {
-            color: rgb(170, 170, 170);
-        }
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
 
+  .user-playlists {
+    overflow: scroll;
+    height: 261px;
+    padding-block-end: 30px;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    button:hover {
-        cursor: pointer;
+    a {
+      color: rgb(170, 170, 170);
     }
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
 }
 
-.user-station{
-    display: flex;
-    fill: #1db954;
-    gap: 38px;
-    align-items: center;
-    &-title{
-        width: 151px;
+.user-station {
+  display: flex;
+  fill: #1db954;
+  gap: 38px;
+  align-items: center;
+  &-title {
+    width: 151px;
+  }
+  .played-station-icon {
+    height: 17px;
+    svg {
+      width: 14px;
+      height: 14px;
     }
-    .played-station-icon{
-        height: 17px;
-        svg{
-            width: 14px;
-            height: 14px;
-        }
-    }
+  }
 }
 .icon {
-    display: grid;
-    align-items: center;
+  display: grid;
+  align-items: center;
 }
 
 .nav {
-    display: grid;
-    gap: 11px;
-    margin-block-start: 28px;
-    margin-inline-start: -1px;
+  display: grid;
+  gap: 11px;
+  margin-block-start: 28px;
+  margin-inline-start: -1px;
 }
 
-
 button {
-    background-color: transparent;
-    font-weight: 700;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  background-color: transparent;
+  font-weight: 700;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 hr {
-    border-color: rgb(20, 20, 20);
+  border-color: rgb(20, 20, 20);
 }
 
 .playlist-links {
-    font-size: 20px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-    font-size: 0.8125rem;
-    margin-block-start: 11px;
-    overflow: auto;
+  font-size: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-size: 0.8125rem;
+  margin-block-start: 11px;
+  overflow: auto;
 
-    // height: 100%;
-    a {
-        font-size: 14px;
-    }
+  // height: 100%;
+  a {
+    font-size: 14px;
+  }
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-    .playlist-link:hover {
-        cursor: default;
-        color: white;
-    }
+  .playlist-link:hover {
+    cursor: default;
+    color: white;
+  }
 }
 
-.playlist-links:last-child {}
+.playlist-links:last-child {
+}
 
 .icon {
-    fill: white;
+  fill: white;
 }
 
 .create-playlist-btn,
 .liked-songs-btn {
-
-    span {
-        letter-spacing: 1px;
-        font-size: 13px;
-    }
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  span {
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .btn-create,
 .btn-liked {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    background-color: #d2d2d2;
-    height: 22px;
-    width: 22px;
-    border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: #d2d2d2;
+  height: 22px;
+  width: 22px;
+  border-radius: 2px;
 }
 
 .btn-liked {
-    background: linear-gradient(135deg, #450af5, #c4efd9);
+  background: linear-gradient(135deg, #450af5, #c4efd9);
 }
 
 .btn-create:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .btn-create .icon {
-    fill: rgb(0, 0, 0);
+  fill: rgb(0, 0, 0);
 }
 
 .btn-nav {
-    font-family: 'Circular light';
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-block-end: 8px;
-    position: relative;
-
+  font-family: "Circular light";
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block-end: 8px;
+  position: relative;
 }
 
 .nav-search {
-    margin: 0;
-    fill: white;
+  margin: 0;
+  fill: white;
 }
 
 .install-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .actions {
-
-    display: flex;
-    flex-direction: column;
-    margin-block-start: 38px;
-    gap: 17px;
-    margin-block-end: 19px;
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 38px;
+  gap: 17px;
+  margin-block-end: 19px;
 }

@@ -1,28 +1,26 @@
 {
-    "title": "Michael Jackson",
-    "userDesc": "The greatest hits of the King Of Pop",  
-    "label": [
-        "Pop"
-    ],
-    "isAddedByUser": false,
-    "songs": [
-        {
-            "title": "Billie Jean",
-            "_id": "vxiFmM",
-            "album": "Thriller",
-            "artist": "Michael Jackson",
-            "videoId": "OZGtRvYF-A4",
-            "imgUrl": "https://i.ytimg.com/vi/OZGtRvYF-A4/mqdefault.jpg",
-            "duration": "4:55"
-        },
-        {
-            "title": "Smooth Criminal",
-            "_id": "PvOEvP",
-            "album": "Bad",
-            "artist": "Michael Jackson",
-            "videoId": "tOgftEf7UDg",
-            "imgUrl": "https://i.ytimg.com/vi/tOgftEf7UDg/mqdefault.jpg",
-            "duration": "4:18"
-        }
-    ]
+  "title": "Michael Jackson",
+  "userDesc": "The greatest hits of the King Of Pop",
+  "label": ["Pop"],
+  "isAddedByUser": false,
+  "songs": [
+    {
+      "title": "Billie Jean",
+      "_id": "vxiFmM",
+      "album": "Thriller",
+      "artist": "Michael Jackson",
+      "videoId": "OZGtRvYF-A4",
+      "imgUrl": "https://i.ytimg.com/vi/OZGtRvYF-A4/mqdefault.jpg",
+      "duration": "4:55"
+    },
+    {
+      "title": "Smooth Criminal",
+      "_id": "PvOEvP",
+      "album": "Bad",
+      "artist": "Michael Jackson",
+      "videoId": "tOgftEf7UDg",
+      "imgUrl": "https://i.ytimg.com/vi/tOgftEf7UDg/mqdefault.jpg",
+      "duration": "4:18"
+    }
+  ]
 }

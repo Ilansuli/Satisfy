@@ -1,203 +1,193 @@
-
-
 .station-details {
-    .liked-songs{
-        // background-color: rgb(80, 56, 160);
-    }
-    &-header {
+  .liked-songs {
+    // background-color: rgb(80, 56, 160);
+  }
+  &-header {
+    display: flex;
+    gap: 23px;
+    align-items: flex-end;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      width: 39vw;
+      .username {
+        color: white;
+      }
+      .by-user {
+        font-size: 1vw;
         display: flex;
-        gap: 23px;
-        align-items: flex-end;
-        .custom{
-            cursor: pointer;
-        }
-        &-info {
-            display: flex;
-            flex-direction: column;
-            width: 39vw;
-            .username{color: white;}
-            .by-user {
-                font-size: 1vw;
-                display: flex;
-                margin-block-end: -4px;
-                gap: 8px;
-                align-items: center;
-                .headphones-icon {
-                    margin-block-end: -2px;
+        margin-block-end: -4px;
+        gap: 8px;
+        align-items: center;
+        .headphones-icon {
+          margin-block-end: -2px;
 
-                    svg {
-                        height: 20px;
-                        width: 20px;
-                    }
-                }
-
-                span {
-                    margin: 0;
-                    display: flex;
-                    align-items: flex-end;
-                    color: white;
-
-                    .songs-count {
-                        font-size: 13.4px;
-                        margin-block-end: 0.6px;
-                        color: white;
-                    }
-                    .songs-total-duration{
-                        color: hsla(0,0%,100%,.7);
-                        white-space: nowrap;
-                        font-size: 13px;
-                        letter-spacing: 0.8px;
-                        margin-inline-start: 7px;
-                    }
-                    &::before {
-
-                        content: "•";
-                        margin: 0px 5px 3px -3px;
-                        font-size: 10px;
-                    }
-                }
-            }
-        }
-
-        .img-wrapper {
-         
-            width: 15vw;
-            height: 15vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-
-            .img-container {
-                width: 100%;
-                height: 100%;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    box-shadow: 0 4px 60px rgba(0, 0, 0, .5);
-                }
-            }
-
-            .choose-photo {
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                letter-spacing: 1px;
-                fill: white;
-                color: white;
-                opacity: 0;
-                pointer-events: none;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
-                height: 100%;
-                
-                .upload-preview {
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    position: absolute;
-
-                    input {
-                        // position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        // opacity: 0;
-                        // visibility: hidden;
-                    }
-                }
-            }
-
-            &:hover:not(.not-custom) {
-                .choose-photo {
-                    opacity: 1;
-                    pointer-events: all;
-                }
-            }
+          svg {
+            height: 20px;
+            width: 20px;
+          }
         }
 
         span {
-            font-size: 14px;
-            margin-inline-start: 6px;
-        }
+          margin: 0;
+          display: flex;
+          align-items: flex-end;
+          color: white;
 
-      
-        &-title {
-            font-size: 6.9vw;
-            margin-block-end: 0.1em;
-            letter-spacing: -4px;
-            margin-block-start: 3px;
+          .songs-count {
+            font-size: 13.4px;
+            margin-block-end: 0.6px;
+            color: white;
+          }
+          .songs-total-duration {
+            color: hsla(0, 0%, 100%, 0.7);
+            white-space: nowrap;
+            font-size: 13px;
+            letter-spacing: 0.8px;
+            margin-inline-start: 7px;
+          }
+          &::before {
+            content: "•";
+            margin: 0px 5px 3px -3px;
+            font-size: 10px;
+          }
         }
-        .user-desc{
-            margin-inline-start: 8px;
-        }
-
-        a {
-            margin-inline-start: 8px;
-        }
-
-        p {
-            margin: 0;
-            font-size: 14px;
-            color: #FFFFFFB2;
-        }
+      }
     }
 
+    .img-wrapper {
+      &:hover {
+        .custom {
+          opacity: 1;
+          pointer-events: all;
+          cursor: pointer;
+        }
+      }
+      width: 15vw;
+      height: 15vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .img-container {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .choose-photo {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 1px;
+        fill: white;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+
+        .upload-preview {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          position: absolute;
+
+          input {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    span {
+      font-size: 14px;
+      margin-inline-start: 6px;
+    }
+
+    &-title {
+      font-size: 6.9vw;
+      margin-block-end: 0.1em;
+      letter-spacing: -4px;
+      margin-block-start: 3px;
+    }
+    .user-desc {
+      margin-inline-start: 8px;
+    }
+
+    a {
+      margin-inline-start: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #ffffffb2;
+    }
+  }
 }
 
-
-@media (max-width:800px) {
-    .station-details {
-        &-header {
-            flex-direction: column;
-            align-items: center;
-            .img-wrapper{
-                width: 32vw;
-                height: 32vw;
-            }
-            &-info{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-                width: auto;
-            }
-            &-title{
-                display: none;
-                .user-desc{
-                    margin: 0;
-                }
-            }
-            p{
-                margin: 0;
-                margin-inline-start: 1px;
-            }
-            .playlist{
-                display: none;
-            }
-            .by-user{
-                .songs-count{
-                    margin-block-start: 1.4px;
-                }
-            }
+@media (max-width: 800px) {
+  .station-details {
+    &-header {
+      flex-direction: column;
+      align-items: center;
+      .img-wrapper {
+        width: 32vw;
+        height: 32vw;
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: auto;
+      }
+      &-title {
+        display: none;
+        .user-desc {
+          margin: 0;
         }
+      }
+      p {
+        margin: 0;
+        margin-inline-start: 1px;
+      }
+      .playlist {
+        display: none;
+      }
+      .by-user {
+        .songs-count {
+          margin-block-start: 1.4px;
+        }
+      }
     }
+  }
 }
 
-@media (max-width:500px) {
-    .station-details {
-        &-header {
-            .img-wrapper{
-                width: 57vw;
-                height: 57vw;
-            }
-            &-info{
-                align-self: start;
-                align-items: flex-start;
-            }
-        }
+@media (max-width: 500px) {
+  .station-details {
+    &-header {
+      .img-wrapper {
+        width: 57vw;
+        height: 57vw;
+      }
+      &-info {
+        align-self: start;
+        align-items: flex-start;
+      }
     }
+  }
 }
