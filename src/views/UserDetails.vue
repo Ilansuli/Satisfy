@@ -25,25 +25,26 @@ import { userService } from "../services/user.service";
 
 export default {
   data() {
-    return {};
+    return {
+      user: null,
+    };
   },
+  created() {},
   watch: {
-    userId: {
-      handler() {
-        if (this.userId) {
-          this.$store.dispatch({
-            type: "loadAndWatchUser",
-            userId: this.userId,
-          });
+    "$route.params": {
+      async handler() {
+        const { id } = this.$route.params;
+        try {
+          const user = await userService.getById(id);
+          this.user = user;
+        } catch (error) {
+          console.log("Error fetching user: ", error);
         }
       },
       immediate: true,
     },
   },
   computed: {
-    user() {
-      return this.$store.getters.watchedUser;
-    },
     userId() {
       return this.$route.params.id;
     },
@@ -59,11 +60,10 @@ export default {
     getSvg(iconName) {
       return svgService.getSvg(iconName);
     },
-    async updateImgUrl(imgUrl) {
+    updateImgUrl(imgUrl) {
       if (!imgUrl) return;
-      const newUser = { ...this.user };
-      newUser.imgUrl = imgUrl;
-      this.$store.dispatch({ type: "updateUser", user: newUser });
+      this.user.imgUrl = imgUrl;
+      this.$store.dispatch({ type: "updateUser", user: this.user });
     },
   },
   components: {
