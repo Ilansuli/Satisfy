@@ -11,8 +11,8 @@
       <RouterView />
     </div>
     <AppFooter />
-    <MobileNav />
   </div>
+  <MobileNav />
 </template>
 
 <script>

@@ -15,20 +15,18 @@
         <div></div>
       </div>
     </div>
-    <Container orientation="vertical" @drop="onDrop">
-      <Draggable v-for="(song, index) in station.songs" :key="song._id">
-        <SongPreview
-          @removeSong="removeSong"
-          @setSong="setSong"
-          @setStation="setStation"
-          @setActiveSong="setActiveSong"
-          :activeSongId="activeSongId"
-          :song="song"
-          :station="station"
-          :index="index"
-        />
-      </Draggable>
-    </Container>
+    <SongPreview
+      v-for="(song, index) in station.songs"
+      :key="song._id"
+      @removeSong="removeSong"
+      @setSong="setSong"
+      @setStation="setStation"
+      @setActiveSong="setActiveSong"
+      :activeSongId="activeSongId"
+      :song="song"
+      :station="station"
+      :index="index"
+    />
   </ul>
 </template>
 
