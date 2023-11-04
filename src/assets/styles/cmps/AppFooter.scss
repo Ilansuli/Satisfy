@@ -48,9 +48,9 @@
     }
 
     .song-info {
-      position: absolute;
+      position: fixed;
       z-index: 200;
-      bottom: 70px;
+      bottom: 60px;
       width: 90vw;
       margin-inline-start: 5vw;
       margin-inline-end: 5vw;
@@ -100,6 +100,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-inline-start: 2px;
     -webkit-mask-image: linear-gradient(
       90deg,
       transparent,

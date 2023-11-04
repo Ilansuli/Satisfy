@@ -1,0 +1,16 @@
+.mobile-nav {
+  @media (min-width: 800px) {
+    display: none;
+  }
+  &-btn {
+    width: unset;
+    padding-block: 1rem;
+    cursor: pointer;
+  }
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  z-index: 800;
+  background-color: black;
+  justify-content: space-around;
+}

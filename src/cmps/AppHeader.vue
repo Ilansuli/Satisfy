@@ -4,13 +4,28 @@
       <button title="Go Back" @click="goBack" class="header-btn header-nav-btn">
         <div class="icon" v-html="getSvg('arrowLeft')"></div>
       </button>
-      <button title="Go Forward" @click="goForward" class="header-btn btn-next header-nav-btn">
-        <div class="header-btn btn-prev icon" v-html="getSvg('arrowRight')"></div>
+      <button
+        title="Go Forward"
+        @click="goForward"
+        class="header-btn btn-next header-nav-btn"
+      >
+        <div
+          class="header-btn btn-prev icon"
+          v-html="getSvg('arrowRight')"
+        ></div>
       </button>
     </section>
-    <PlayBtn :style="{ opacity: 1 - this.$store.getters.opacity - 3 }" :station="currStation" v-if="showPlayBtn" />
-    <span class="station-title" :style="{ opacity: 1 - this.$store.getters.opacity - 3 }" v-if="showPlayBtn">{{
-      stationTitle }}</span>
+    <PlayBtn
+      :style="{ opacity: 1 - this.$store.getters.opacity - 3 }"
+      :station="currStation"
+      v-if="showPlayBtn"
+    />
+    <span
+      class="station-title"
+      :style="{ opacity: 1 - this.$store.getters.opacity - 3 }"
+      v-if="showPlayBtn"
+      >{{ stationTitle }}</span
+    >
     <SongSearch class="header-search" @setSearch="setSearch" v-if="isSearch" />
     <div v-else class="header-search-placeholder"></div>
     <!-- <SongSearchList class="station-details-search" @setFilter="setFilter" /> -->
@@ -19,16 +34,16 @@
         <img class="header-img" :src="loggedInUser.imgUrl" />
       </div>
 
-      <div v-else class="user-icon-container">
-        <div class="user-icon" v-html="getSvg('user')"></div>
-      </div>
-
       <RouterLink :to="`/user/${loggedInUser._id}`">
         {{ loggedInUser.username }}
       </RouterLink>
 
       <div class="arrow-down-icon-container">
-        <div @click.stop="openUserOptions" class="arrow-down-icon" v-html="getSvg('arrowDownFill')"></div>
+        <div
+          @click.stop="openUserOptions"
+          class="arrow-down-icon"
+          v-html="getSvg('arrowDownFill')"
+        ></div>
       </div>
       <ul v-if="isUserOptionsShown" class="user-options-menu">
         <li @click="doLogout">Logout</li>
@@ -47,32 +62,35 @@
 </template>
 
 <script>
-import { svgService } from '../services/svg.service.js';
-import SongSearchList from './SongSearchList.vue';
-import { stationService } from '../services/station.service.js';
-import SongSearch from './SongSearch.vue';
-import PlayBtn from './PlayBtn.vue';
+import { svgService } from "../services/svg.service.js";
+import SongSearchList from "./SongSearchList.vue";
+import { stationService } from "../services/station.service.js";
+import SongSearch from "./SongSearch.vue";
+import PlayBtn from "./PlayBtn.vue";
 export default {
   data() {
     return {
       isShowLogin: true,
       isShowSignUp: true,
-      stationTitle: ''
+      stationTitle: "",
     };
   },
   methods: {
     openUserOptions() {
-      this.$store.commit({ type: 'openUserOptions' });
+      this.$store.commit({ type: "openUserOptions" });
     },
     getSvg(iconName) {
       return svgService.getSvg(iconName);
     },
     setFilter(filterBy) {
-      this.$store.dispatch({ type: 'loadToys', filterBy });
+      this.$store.dispatch({ type: "loadToys", filterBy });
     },
     goBack() {
-      if (Object.keys(this.$route.query).length > 0 && this.$route.path === '/search') {
-        this.$router.replace('/search');
+      if (
+        Object.keys(this.$route.query).length > 0 &&
+        this.$route.path === "/search"
+      ) {
+        this.$router.replace("/search");
       } else this.$router.go(-1);
     },
     goForward() {
@@ -82,12 +100,12 @@ export default {
       if (this.isSearch) {
         // const url = new URL(window.location)
         // url.searchParams.set('query',query)
-        this.$router.replace({ name: 'Search', query: { query } });
+        this.$router.replace({ name: "Search", query: { query } });
       }
     },
     doLogout() {
-      this.$store.dispatch({ type: 'logout' });
-      this.$router.push('/');
+      this.$store.dispatch({ type: "logout" });
+      this.$router.push("/");
     },
   },
   computed: {
@@ -102,7 +120,9 @@ export default {
     },
     headerColor() {
       const opacity = 1 - this.$store.getters.opacity;
-      return this.$store.getters.currColor.replace('rgb', 'rgba').replace(')', `, ${opacity})`);
+      return this.$store.getters.currColor
+        .replace("rgb", "rgba")
+        .replace(")", `, ${opacity})`);
     },
     isFilterShown() {
       return this.$store.getters.isFilterShown;
@@ -111,7 +131,7 @@ export default {
       return this.$store.getters.loggedinUser;
     },
     isSearch() {
-      if (this.$route.name === 'Search') return true;
+      if (this.$route.name === "Search") return true;
       else return false;
     },
   },
@@ -119,10 +139,10 @@ export default {
     $route: {
       handler() {
         const { path } = this.$route;
-        if (path === '/login') {
+        if (path === "/login") {
           this.isShowLogin = false;
           this.isShowSignUp = false;
-        } else if (path === '/signup') {
+        } else if (path === "/signup") {
           this.isShowLogin = true;
           this.isShowSignUp = false;
         } else {
@@ -132,16 +152,16 @@ export default {
       },
       immediate: true,
     },
-    '$route.params': {
+    "$route.params": {
       async handler() {
         const { stationId } = this.$route.params;
-        console.log('stationId', stationId)
+        console.log("stationId", stationId);
         try {
           const station = await stationService.getById(stationId);
-          console.log('station', station)
-          this.stationTitle = station.title
+          console.log("station", station);
+          this.stationTitle = station.title;
         } catch (error) {
-          console.log('Error fetching station: ', error);
+          console.log("Error fetching station: ", error);
         }
       },
       immediate: true,

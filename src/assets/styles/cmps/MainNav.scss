@@ -3,30 +3,31 @@ $secondary-color: #aaa;
 
 .main-nav {
   @media (max-width: 800px) {
-    width: 100vw;
-    display: grid;
-    grid-row: 3;
-    grid-column: 1/-1;
+    display: none;
+    //   width: 100vw;
+    //   display: grid;
+    //   grid-row: 3;
+    //   grid-column: 1/-1;
 
-    .actions,
-    span,
-    hr,
-    .main-nav-logo,
-    .playlist-links {
-      display: none;
-    }
+    //   .actions,
+    //   span,
+    //   hr,
+    //   .main-nav-logo,
+    //   .playlist-links {
+    //     display: none;
+    //   }
 
-    .nav {
-      justify-content: space-evenly;
-      grid-auto-flow: column;
-    }
+    //   .nav {
+    //     justify-content: space-evenly;
+    //     grid-auto-flow: column;
+    //   }
 
-    a {
-      justify-self: center;
-    }
-    .btn-nav-library {
-      // padding-inline-start: 62px;
-    }
+    //   a {
+    //     justify-self: center;
+    //   }
+    //   .btn-nav-library {
+    //     // padding-inline-start: 62px;
+    //   }
   }
 
   z-index: 310;
@@ -55,9 +56,7 @@ $secondary-color: #aaa;
     h1 {
       font-size: 1.8rem;
       color: white;
-      // margin-block-start: 15px;
       margin: 0 0 0.1em;
-      // margin-block-end: 30px;
     }
   }
 

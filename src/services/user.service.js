@@ -41,11 +41,12 @@ function remove(userId) {
 
 async function update(user) {
   const { _id } = user;
-  await httpService.put(`user/${_id}`, user);
-  if (getLoggedinUser()._id === user._id) {
-    saveLocalUser(user);
+  const updatedUser = await httpService.put(`user/${_id}`, user);
+  console.log(updatedUser);
+  if (getLoggedinUser()._id === updatedUser._id) {
+    saveLocalUser(updatedUser);
   }
-  return user;
+  return updatedUser;
 }
 
 async function login(userCred) {
@@ -58,7 +59,9 @@ async function login(userCred) {
   }
 }
 async function signup(userCred) {
-  if (!userCred.imgUrl) userCred.imgUrl = "";
+  if (!userCred.imgUrl)
+    userCred.imgUrl =
+      "https://res.cloudinary.com/dmmsf57ko/image/upload/v1683826469/WhatsApp_Image_2023-05-11_at_20.32.48_ybb9ov.jpg";
   // const user = await storageService.post('user', userCred)
   const user = await httpService.post("auth/signup", userCred);
   // socketService.login(user._id)

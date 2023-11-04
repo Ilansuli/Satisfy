@@ -10,16 +10,7 @@
       </article>
 
       <div class="img-container">
-        <img
-          v-if="user.imgUrl"
-          ref="image"
-          :src="user.imgUrl"
-          crossorigin="anonymous"
-        />
-        <img
-          v-else
-          src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683826469/WhatsApp_Image_2023-05-11_at_20.32.48_ybb9ov.jpg"
-        />
+        <img ref="image" :src="this.user.imgUrl" crossorigin="anonymous" />
       </div>
     </div>
     <h3>Nickname - {{ user.username }}</h3>
@@ -33,6 +24,9 @@ import { svgService } from "../services/svg.service";
 import { userService } from "../services/user.service";
 
 export default {
+  data() {
+    return {};
+  },
   watch: {
     userId: {
       handler() {
@@ -69,7 +63,6 @@ export default {
       if (!imgUrl) return;
       const newUser = { ...this.user };
       newUser.imgUrl = imgUrl;
-      userService.update(newUser);
       this.$store.dispatch({ type: "updateUser", user: newUser });
     },
   },
