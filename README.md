@@ -1,6 +1,6 @@
   <h1>Satisfy</h1>
   <p>To use Satisfy, please visit the following link:</p>
-  <a href="https://satisfy.onrender.com/#/station">https://satisfy.onrender.com/#/station</a>
+  <a href="https://satisfy-2v03.onrender.com/#/station">www.satisfy.com</a>
    <img src="https://res.cloudinary.com/dmmsf57ko/image/upload/v1683726266/headphones-removebg-preview_naln9y.png" width="10%" />
   <p>Satisfy is an end-to-end project based on the famous Spotify app that allows users to sign up, log in, and build their own playlists with their desired songs. The app also features real-time synchronization with mobile devices using sockets and is fully responsive. Additionally, the app utilizes YouTube's API to retrieve song information and integrate YouTube videos.</p>
   <p>This project was created in collaboration with Darnell Green and Amit Cohen.</p>
